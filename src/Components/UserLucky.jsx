@@ -1,18 +1,18 @@
 
-const UserLucky = ( props ) => {
-    const {data} = props
+const UserLucky = ({data, button}) => {
+    
+
     return(
-        <header>
-            <img src="./assets" alt="" className="image"/>
-        <div className="first-div">
-            <h1 className="lucky-title">GALLETAS DE LA FORTUNA</h1>
-            <div className="lucky-text">
+        <>
+            <h1>GALLETAS DE LA FORTUNA</h1>
+
+            <div className="lucky-main">
             <p>{data.phrase}</p>
-            <h2 className="lucky-author"><em>{data.author}</em></h2>
+            <h2><em>{data.author}</em></h2>
             </div>
-            
-        </div>
-        </header>
+
+            <button onClick={button}>Ver otro</button>
+        </>
     )
 
 }
